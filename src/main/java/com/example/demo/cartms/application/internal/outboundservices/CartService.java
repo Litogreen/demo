@@ -3,6 +3,7 @@ package com.example.demo.cartms.application.internal.outboundservices;
 import static com.example.demo.exceptions.DemoResponseConst.ReturnCode.E0001;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,6 +44,7 @@ public class CartService {
 	@Transactional
 	public CartDTO createCart() {
 		CartPO cartPO = new CartPO( 0, LocalDateTime.now(), LocalDateTime.now() );
+		cartPO.setCartItemPO( new HashSet<CartItemPO>() );
 		cartDAO.save( cartPO );
 		return CartDTO.createByCartPO( cartPO );
 	}

@@ -16,13 +16,13 @@ public class CartDTO {
 	public static CartDTO createByCartPO(CartPO cartPO) {
 		CartDTO cartDTO = new CartDTO();
 		BeanUtils.copyProperties( cartPO, cartDTO );
-		cartDTO.setCartItemDTO( Stream.ofNullable( cartPO.getCartItemPO() )
+		cartDTO.setCartItemDTO( Stream.of( cartPO.getCartItemPO() )
 				.flatMap( Collection::stream )
 				.map( CartItemDTO::createByCartItemPO )
 				.collect( toSet() ) );
 		return cartDTO;
 	}
-
+	
 	public static CartPO createCartPO(CartDTO cartDTO) {
 		CartPO cartPO = new CartPO();
 		BeanUtils.copyProperties( cartDTO, cartPO );

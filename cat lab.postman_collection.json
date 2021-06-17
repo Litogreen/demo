@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "bc2763e0-038a-4999-be43-2e78dadfab59",
+		"name": "cat lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/cart",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCartById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/cart/ff8080817a14574e017a1457d13b0000",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"cart",
+						"ff8080817a14574e017a1457d13b0000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addItemToCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"goodsId\": 8762289,\n    \"count\": 1,\n    \"goodsName\": \"【股癌新作】灰階思考\",\n    \"unitPrice\": 316\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/cart/ff8080817a14574e017a1457d13b0000",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"cart",
+						"ff8080817a14574e017a1457d13b0000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editItemToCart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"count\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/cart/ff8080817a140eba017a140fc9b50000/goodsId/2991",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"cart",
+						"ff8080817a140eba017a140fc9b50000",
+						"goodsId",
+						"2991"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testGetGoodsInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/goods/1297",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"goods",
+						"1297"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{local}}/order/cart/ff8080817a14574e017a1457d13b0000",
+					"protocol": "http",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"order",
+						"cart",
+						"ff8080817a14574e017a1457d13b0000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
