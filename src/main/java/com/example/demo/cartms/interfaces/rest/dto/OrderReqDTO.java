@@ -3,6 +3,9 @@ package com.example.demo.cartms.interfaces.rest.dto;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import lombok.Data;
+
+@Data
 public class OrderReqDTO {
 	public static OrderReqDTO createOrderByCartDTO(CartDTO cartDTO) {
 		OrderReqDTO orderReqDTO = new OrderReqDTO();
@@ -21,36 +24,5 @@ public class OrderReqDTO {
 
 	private Integer totalAmount;
 
-	public String getCartId() {
-		return cartId;
-	}
-
-	public String getCustomerName() {
-		return customerName;
-	}
-
-	public Set<OrderGoodsReqDTO> getGoods() {
-		return goods;
-	}
-
-	public Integer getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setCartId(String cartId) {
-		this.cartId = cartId;
-	}
-
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
-
-	public void setGoods(Set<OrderGoodsReqDTO> goods) {
-		this.goods = goods;
-	}
-
-	public void setTotalAmount(Integer totalAmount) {
-		this.totalAmount = totalAmount;
-	}
 
 }

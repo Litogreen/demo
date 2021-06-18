@@ -4,6 +4,9 @@ import org.springframework.beans.BeanUtils;
 
 import com.example.demo.cartms.domain.model.entites.CartItemPO;
 
+import lombok.Data;
+
+@Data
 public class CartItemUpdateDTO {
 
 	public static CartItemUpdateDTO createByCartItemPO(CartItemPO cartItemPO) {
@@ -21,12 +24,5 @@ public class CartItemUpdateDTO {
 	private int count;
 
 
-	public int getCount() {
-		return count;
-	}
-
-	public void setCount(int goodsCount) {
-		this.count = goodsCount;
-	}
 
 }

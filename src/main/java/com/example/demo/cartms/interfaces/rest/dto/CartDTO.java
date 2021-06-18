@@ -11,6 +11,9 @@ import org.springframework.beans.BeanUtils;
 
 import com.example.demo.cartms.domain.model.entites.CartPO;
 
+import lombok.Data;
+
+@Data
 public class CartDTO {
 
 	public static CartDTO createByCartPO(CartPO cartPO) {
@@ -34,45 +37,5 @@ public class CartDTO {
 	private LocalDateTime createdDate;
 	private LocalDateTime lastModifiedDate;
 	private Set<CartItemDTO> cartItemDTO;
-
-	public int getAmount() {
-		return amount;
-	}
-
-	public String getCartId() {
-		return cartId;
-	}
-
-	public Set<CartItemDTO> getCartItemDTO() {
-		return cartItemDTO;
-	}
-
-	public LocalDateTime getCreatedDate() {
-		return createdDate;
-	}
-
-	public LocalDateTime getLastModifiedDate() {
-		return lastModifiedDate;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-
-	public void setCartId(String cartId) {
-		this.cartId = cartId;
-	}
-
-	public void setCartItemDTO(Set<CartItemDTO> cartItemDTO) {
-		this.cartItemDTO = cartItemDTO;
-	}
-
-	public void setCreatedDate(LocalDateTime createdDate) {
-		this.createdDate = createdDate;
-	}
-
-	public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
-		this.lastModifiedDate = lastModifiedDate;
-	}
 
 }

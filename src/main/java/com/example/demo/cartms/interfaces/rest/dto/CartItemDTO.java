@@ -4,6 +4,9 @@ import org.springframework.beans.BeanUtils;
 
 import com.example.demo.cartms.domain.model.entites.CartItemPO;
 
+import lombok.Data;
+
+@Data
 public class CartItemDTO {
 
 	public static CartItemDTO createByCartItemPO(CartItemPO cartItemPO) {
@@ -27,37 +30,5 @@ public class CartItemDTO {
 
 	private Integer count;
 
-	public Integer getCount() {
-		return count;
-	}
-
-	public String getGoodsId() {
-		return goodsId;
-	}
-
-	public String getGoodsName() {
-		return goodsName;
-	}
-
-
-	public Integer getUnitPrice() {
-		return unitPrice;
-	}
-
-	public void setCount(Integer count) {
-		this.count = count;
-	}
-
-	public void setGoodsId(String goodsId) {
-		this.goodsId = goodsId;
-	}
-
-	public void setGoodsName(String goodsName) {
-		this.goodsName = goodsName;
-	}
-
-	public void setUnitPrice(Integer unitPrice) {
-		this.unitPrice = unitPrice;
-	}
 
 }

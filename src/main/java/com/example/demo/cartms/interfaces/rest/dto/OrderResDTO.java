@@ -2,6 +2,9 @@ package com.example.demo.cartms.interfaces.rest.dto;
 
 import java.util.Set;
 
+import lombok.Data;
+
+@Data
 public class OrderResDTO {
 	
 	private String customerName;
@@ -10,35 +13,4 @@ public class OrderResDTO {
 
 	private Integer totalAmount;
 
-	public String getCustomerName() {
-		return customerName;
-	}
-
-	public Set<OrderGoodsResDTO> getGoods() {
-		return goods;
-	}
-
-	public String getOrderId() {
-		return orderId;
-	}
-
-	public Integer getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
-
-	public void setGoods(Set<OrderGoodsResDTO> goods) {
-		this.goods = goods;
-	}
-
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
-	}
-
-	public void setTotalAmount(Integer totalAmount) {
-		this.totalAmount = totalAmount;
-	}
 }
